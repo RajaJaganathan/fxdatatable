@@ -1,0 +1,17 @@
+<table class="fx-datatable">
+  <thead>
+    <tr class="fx-datatable__head--row">
+      <th *ngFor="let column of columns" class="fx-datatable__head--cell">
+        {{column.headerText}}
+      </th>
+    </tr>
+  </thead>
+  <tbody class="fx-datatable__body">
+    <tr *ngFor="let item of dataProvider" class="fx-datatable__body--row">
+      <td *ngFor="let column of columns" class="fx-datatable__body--cell">
+        {{ item[column.dataField] }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+

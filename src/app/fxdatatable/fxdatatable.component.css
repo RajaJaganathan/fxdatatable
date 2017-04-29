@@ -1,0 +1,17 @@
+.fx-datatable {
+    border-collapse: collapse;
+    border: gray;
+}
+
+.fx-datatable__head--row {
+    height: 50px;
+    background: slategray;
+}
+
+.fx-datatable__head--cell {
+    padding: 15px;
+}
+
+.fx-datatable__body--cell {
+    padding: 15px;
+}

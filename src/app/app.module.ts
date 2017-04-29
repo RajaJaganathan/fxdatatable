@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { FxDataTableComponent } from './fxdatatable/fxdatatable.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FxDataTableComponent
   ],
   imports: [
     BrowserModule,
