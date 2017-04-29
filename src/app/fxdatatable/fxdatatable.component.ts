@@ -8,7 +8,7 @@ import { Component, OnInit, OnDestroy, Input, Output } from '@angular/core';
 export class FxDataTableComponent implements OnInit {
 
   @Input() dataProvider: any[];
-  @Input() columns: any[];
+  @Input() columns: Column[];
 
   constructor() { }
 
@@ -30,4 +30,12 @@ export class FxDataTableComponent implements OnInit {
     return o;
   }
 
+}
+
+
+export interface Column {
+  headerText: string
+  dataField: string
+  sortable?: boolean;
+  sort?: any;
 }

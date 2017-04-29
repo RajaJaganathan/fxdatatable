@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-
-
-interface Column {
-  headerText: string
-  dataField: string
-  sortable?: boolean;
-  sort?: any;
-}
+import { Column } from './fxdatatable/fxdatatable.component'
 
 @Component({
   selector: 'app-root',
@@ -15,7 +8,7 @@ interface Column {
 })
 export class AppComponent {
   title = 'fxDataTable Demo';
-  
+
   peopleTableColumns: Column[] = [{
     headerText: 'First Name',
     dataField: 'firstName',
