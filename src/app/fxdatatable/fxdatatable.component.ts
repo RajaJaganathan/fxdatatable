@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy, Input, Output } from '@angular/core';
+import { Column } from './column';
 
 @Component({
   selector: 'fx-datatable',
@@ -30,12 +31,4 @@ export class FxDataTable implements OnInit {
     return o;
   }
 
-}
-
-
-export interface Column {
-  headerText: string
-  dataField: string
-  sortable?: boolean;
-  sort?: any;
 }
