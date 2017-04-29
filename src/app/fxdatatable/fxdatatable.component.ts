@@ -5,7 +5,7 @@ import { Component, OnInit, OnDestroy, Input, Output } from '@angular/core';
   templateUrl: './fxdatatable.component.html',
   styleUrls: ['./fxdatatable.component.css']
 })
-export class FxDataTableComponent implements OnInit {
+export class FxDataTable implements OnInit {
 
   @Input() dataProvider: any[];
   @Input() columns: Column[];
