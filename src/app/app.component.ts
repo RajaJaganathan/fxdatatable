@@ -1,5 +1,13 @@
 import { Component } from '@angular/core';
 
+
+interface Column {
+  headerText: string
+  dataField: string
+  sortable?: boolean;
+  sort?: any;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,9 +15,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fxDataTable Demo';
-  peopleTableColumns: any[] = [{
+  
+  peopleTableColumns: Column[] = [{
     headerText: 'First Name',
-    dataField: 'firstName'
+    dataField: 'firstName',
+    sortable: true
   }, {
     headerText: 'Last Name',
     dataField: 'lastName'
