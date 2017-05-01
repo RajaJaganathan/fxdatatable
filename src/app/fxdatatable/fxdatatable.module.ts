@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FxDataTable } from './fxdatatable.component';
+import { FxDataTable, FxTemplate } from './fxdatatable.component';
+import { FxColumn } from './fxdatatable.column';
 import { Column } from './column';
 
 @NgModule({
@@ -9,8 +10,12 @@ import { Column } from './column';
     CommonModule
   ],
   declarations: [
-    FxDataTable
+    FxDataTable,
+    FxTemplate,
+    FxColumn
   ],
-  exports: [FxDataTable]
+  exports: [FxDataTable,
+    FxTemplate,
+    FxColumn]
 })
 export class FxDataTableModule { }

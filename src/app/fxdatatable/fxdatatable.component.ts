@@ -1,5 +1,6 @@
-import { Component, OnInit, OnDestroy, Input, Output } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, Output, Directive, TemplateRef } from '@angular/core';
 import { Column } from './column';
+import { FxColumn } from './fxdatatable.column';
 
 @Component({
   selector: 'fx-datatable',
@@ -31,4 +32,28 @@ export class FxDataTable implements OnInit {
     return o;
   }
 
+}
+
+@Directive({
+    selector: '[fxTemplate]',
+    host: {
+    }
+})
+export class FxTemplate {
+    
+    @Input() type: string;
+    
+    @Input('fxTemplate') name: string;
+    
+    constructor(public template: TemplateRef<any>) {}
+    
+    public getType(): string {
+        if(this.type) {
+            console.log('Defining a pTemplate with type property is deprecated use pTemplate="type" instead.');
+            return this.type;
+        }
+        else {
+            return this.name;
+        }
+    }
 }

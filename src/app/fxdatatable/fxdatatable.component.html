@@ -2,7 +2,8 @@
   <thead>
     <tr class="fx-datatable__head--row">
       <th *ngFor="let column of columns" class="fx-datatable__head--cell">
-        {{column.headerText}}
+        <span *ngIf="!column.template">{{column.headerText}}</span>
+        <span *ngIf="column.template">Template content</span>
       </th>
     </tr>
   </thead>

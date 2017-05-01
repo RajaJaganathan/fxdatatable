@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Column } from './fxdatatable/fxdatatable.component'
+import { Column } from './fxdatatable/column'
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,8 @@ export class AppComponent {
   peopleTableColumns: Column[] = [{
     headerText: 'First Name',
     dataField: 'firstName',
-    sortable: true
+    sortable: true,
+    template: true,
   }, {
     headerText: 'Last Name',
     dataField: 'lastName'
